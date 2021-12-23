@@ -49,3 +49,16 @@ p {
     font-size: 20px;
     color: rgb(11, 145, 18);
 }
+
+.history {
+    text-align: center;
+    margin: 10px 0;
+}
+.history button {
+    background: rgb(11, 145, 18);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-family: bold;
+    font-size: 18px;
+}

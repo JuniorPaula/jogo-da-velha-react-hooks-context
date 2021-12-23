@@ -10,14 +10,14 @@ import Reset from "./Reset";
 import Winner from "./Winner";
 
 export default function Board() {
-    const { squares, setWhoIsWinner } = useContext(GameContext);
+    const { squares, setWhoIsWinner, history } = useContext(GameContext);
 
     useEffect(() => {
         const winner = calculateWinner(squares);
         if(winner) {
             setWhoIsWinner(winner);
         }
-    }, [squares]);
+    }, [squares, setWhoIsWinner, history]);
     
     return (
         <div className="board-container">

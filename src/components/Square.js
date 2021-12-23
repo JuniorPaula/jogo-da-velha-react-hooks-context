@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import {GameContext} from '../contexts/GameContext';
 
 export default function Square({ value, index }) {
-    const { squares, setSquares, isXNext, setIsXNext, whoIsWinner } = useContext(GameContext);
+    const { squares, setSquares, isXNext, setIsXNext, whoIsWinner, setHistory, history } = useContext(GameContext);
     
     function handleClick() {
         if(squares[index]) return;
@@ -13,6 +13,11 @@ export default function Square({ value, index }) {
         newSquare[index] = isXNext ? 'X' : 'O';
         setSquares(newSquare);
         setIsXNext(!isXNext);
+
+        setHistory([...history, {
+            squares: [...squares],
+            isNext: !isXNext,
+        }]);
 
     } 
 
