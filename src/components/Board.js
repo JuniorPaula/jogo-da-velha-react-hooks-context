@@ -7,6 +7,7 @@ import {GameContext} from '../contexts/GameContext';
 import Square from "./Square";
 import Player from "./Player";
 import Reset from "./Reset";
+import Winner from "./Winner";
 
 export default function Board() {
     const { squares, setWhoIsWinner } = useContext(GameContext);
@@ -21,6 +22,7 @@ export default function Board() {
     return (
         <div className="board-container">
             <Player />
+            <Winner />
             <Reset />
             <div className="board">
                 {squares.map((value, index) => (

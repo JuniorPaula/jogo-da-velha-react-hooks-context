@@ -44,3 +44,8 @@ p {
     font-family: bold;
     font-size: 18px;
 }
+
+.winner {
+    font-size: 20px;
+    color: rgb(11, 145, 18);
+}
