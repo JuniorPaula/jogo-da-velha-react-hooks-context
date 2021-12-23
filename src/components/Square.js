@@ -3,10 +3,11 @@ import React, { useContext } from "react";
 import {GameContext} from '../contexts/GameContext';
 
 export default function Square({ value, index }) {
-    const { squares, setSquares, isXNext, setIsXNext } = useContext(GameContext);
+    const { squares, setSquares, isXNext, setIsXNext, whoIsWinner } = useContext(GameContext);
     
     function handleClick() {
         if(squares[index]) return;
+        if(whoIsWinner) return;
 
         const newSquare = [ ...squares];
         newSquare[index] = isXNext ? 'X' : 'O';
