@@ -2,6 +2,12 @@
     max-width: 640px;
     margin: 0 auto;
 }
+
+.board-container h1 {
+    text-align: center;
+    padding: 20px 0;
+}
+
 .board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -23,4 +29,18 @@
     content: '';
     display: block;
     padding-bottom: 100%;
+}
+
+p {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.reset button {
+    background: #ccc;
+    padding: 10px 15px;
+    border: 2px solid rgb(83, 83, 83);
+    cursor: pointer;
+    font-family: bold;
+    font-size: 18px;
 }
